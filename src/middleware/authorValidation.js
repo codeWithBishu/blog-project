@@ -24,46 +24,46 @@ const authorValidation = async function (req, res, next) {
                                                 if (typeof (data.password) === "string") {
                                                     next()
                                                 } else {
-                                                    res.status(400).send({ error: "please give password in string" })
+                                                    res.status(400).send({ status:false, message: "please give password in string" })
                                                 }
                                             } else {
-                                                res.status(400).send({ error: "passsword is mandatory" })
+                                                res.status(400).send({ status:false, message: "passsword is mandatory" })
                                             }
                                         } else {
-                                            res.status(400).send({ error: "please give valide  email" })
+                                            res.status(400).send({ status:false, message: "please give valide  email" })
                                         }
                                     } else {
-                                        res.status(400).send({ error: "please give email in string" })
+                                        res.status(400).send({ status:false, message: "please give email in string" })
                                     }
                                 } else {
-                                    res.status(400).send({ error: "email is mandatory" })
+                                    res.status(400).send({ status:false, message: "email is mandatory" })
                                 }
                             } else {
-                                res.status(400).send({ error: "please give correct enumerator" })
+                                res.status(400).send({ status:false, message: "please give correct enumerator" })
                             }
                         } else {
-                            res.status(400).send({ error: "please give title in string" })
+                            res.status(400).send({ status:false, message: "please give title in string" })
                         }
                     } else {
-                        res.status(400).send({ error: "title is mandatory" })
+                        res.status(400).send({ status:false, message: "title is mandatory" })
                     }
                 } else {
-                    res.status(400).send({ error: "please give valid lname" })
+                    res.status(400).send({ status:false, message: "please give valid lname" })
                 }
                 } else {
-                    res.status(400).send({ error: "please give lname in string" })
+                    res.status(400).send({ status:false, message: "please give lname in string" })
                 }
             } else {
-                res.status(400).send({ error: "lname is mandatory" })
+                res.status(400).send({ status:false, message: "lname is mandatory" })
             }
         } else {
-            res.status(400).send({ error: "please give valid fname" })
+            res.status(400).send({ status:false, message: "please give valid fname" })
         }
         } else {
-            res.status(400).send({ error: "please give fname in string" })
+            res.status(400).send({ status:false, message: "please give fname in string" })
         }
     } else {
-        res.status(400).send({ error: "fname is mandatory" })
+        res.status(400).send({ status:false, message: "fname is mandatory" })
     }
 }
 catch(err){
