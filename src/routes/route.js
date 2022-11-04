@@ -15,6 +15,7 @@ router.post("/blogs",authVerify.authentication,blogValidation.bolgSchemaValidati
 
 
 router.get("/getBlog",blogController.getBlog)
+
 router.get("/blogs",authVerify.authentication,blogController.blogs)
 
 router.put("/blogs/:blogId",authVerify.authentication,authVerify.authorization,blogValidation.blogIdValidate, blogController.updateBlog)
